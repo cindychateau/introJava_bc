@@ -69,6 +69,137 @@ public class IntroAJava {
         ArrayList<Integer> myArray3 = new ArrayList<Integer>();
         myArray3.add(10);
 
+
+        //Condicionales y Operadores
+        boolean llueve = true;
+        boolean soleado = false;
+
+        if(llueve) {
+            System.out.println("Lleva un paraguas.");
+        }
+
+        if(soleado) {
+            System.out.println("Ponte bloqueador");
+        } else {
+            System.out.println("Disfruta tu día");
+        }
+
+        llueve = false;
+        soleado = true;
+
+        if(llueve) {
+            System.out.println("Lleva un paraguas.");
+        } else if(soleado) {
+            System.out.println("Ponte bloqueador");
+        } else {
+            System.out.println("Disfruta tu día");
+        }
+
+        int num1 = 10;
+        int num2 = 6;
+        if(num1 != num2) { // == IGUAL, != DIFERENTES, > MAYOR QUE, < MENOR QUE, >= MAYOR O IGUAL, <= MENOR O IGUAL
+            System.out.println("Los numeros son distintos");
+        }
+
+        llueve = true;
+        soleado = false;
+        if(llueve && soleado) { //&& - Queremos que AMBAS condicionales se cumplan
+            System.out.println("Busca el arcoiris");
+        }
+
+        if(llueve || soleado) { // || - Que se cumpla al menos una de la condicionales
+            System.out.println("Quizás llueve, quizás está soleado, no lo sé.");
+        }
+
+        // if(llueve || (num1 != num2) || (num1 < num2)) {
+
+        // }
+
+        //Switch
+        int dia = 5;
+        if(dia == 1) {
+            System.out.println("Lunes");
+        } else if(dia == 2) {
+            System.out.println("Martes");
+        } else if(dia == 3) {
+            System.out.println("Miércoles");
+        }
+
+        switch(dia) {
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miércoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sábado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default:
+                System.out.println("¿Qué día es entonces?");
+        }
+
+        //OPERADOR TERNARIO -> (condicional) ? "Si se cumple" : "No se cumple"
+        System.out.println(llueve ? "Lleva tu paraguas" : "Ten un lindo día!");
+
+        //BUCLES - Ciclos
+        /*
+        i = 0
+        foo
+        i = 1
+        foo
+        i = 2
+        foo
+        i = 3
+        foo
+        i = 4
+        -------
+        i = 6
+        foo
+        i = 7
+         */
+        int i = 0;
+        while(i < 7) {
+            System.out.println("foo");
+            i++; //me va a aumentar en 1 la variable i
+        }
+
+        /*
+        j = 0
+        bar
+        j = 1
+        bar
+        j = 2
+        bar
+        -------
+        j = 6
+        bar
+        j = 7
+         */
+        for(int j=0; j < 7; j++) {
+            System.out.println("bar");
+        }
+
+        int inicio = 0;
+        int fin = 10;
+        while (inicio < fin) {
+            System.out.println("Inicio: "+inicio+" Final:"+fin);
+            inicio++; //Aumentamos en 1
+            fin -= 2; //Reducimos en 2
+        }
+ 
     }
 
 }
